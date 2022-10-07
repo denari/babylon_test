@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@babylonjs/core": "^5.26.1",
-    "@babylonjs/gui": "^5.26.1"
+    "@babylonjs/gui": "^5.26.1",
+    "css-loader": "^6.7.1",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1"
   },
   "devDependencies": {
     "@babylonjs/inspector": "^5.26.1",

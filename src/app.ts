@@ -2,6 +2,7 @@ import "@babylonjs/core/Debug/debugLayer";
 import "@babylonjs/inspector";
 import "@babylonjs/loaders/glTF";
 import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBuilder } from "@babylonjs/core";
+import "./scss/style.scss";
 
 class App {
     constructor() {
@@ -26,7 +27,12 @@ class App {
         var light1: HemisphericLight = new HemisphericLight("light1", new Vector3(1, 1, 0), scene);
         var sphere: Mesh = MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
 
-        const xrHelper = scene.createDefaultXRExperienceAsync();
+        const xr = scene.createDefaultXRExperienceAsync({
+            // ask for an ar-session
+            uiOptions: {
+              sessionMode: "immersive-ar",
+            },
+        });
 
         // hide/show the Inspector
         window.addEventListener("keydown", (ev) => {
