@@ -7,7 +7,6 @@ import "./scss/style.scss";
 class App {
     constructor() {
         var x = this.createScene();
-        console.log(x);
     }
 
     async createScene() {
@@ -53,4 +52,5 @@ class App {
         
     }
 }
+
 new App();
